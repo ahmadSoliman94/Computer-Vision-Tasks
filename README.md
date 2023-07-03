@@ -1,1 +1,1 @@
-# Computer-Vision-Tasks
+# Computer Vision Tasks

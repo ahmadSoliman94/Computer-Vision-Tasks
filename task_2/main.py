@@ -1,6 +1,7 @@
 import reinhard as rh
 import thresholding as th
 import color_recognition as cr
+import morphological_transformations as mt
 
 
 def main():
@@ -8,34 +9,34 @@ def main():
 
     # =================== COLR RECOGNITION =================== #
 
-    # IMAGES_FOLDER_PATH = './images'
+    IMAGES_FOLDER_PATH = './images'
 
-    # # Create an instance of the Color_Recognition class
-    # color_recognition = cr.Color_Recognition(IMAGES_FOLDER_PATH)
+    # Create an instance of the Color_Recognition class
+    color_recognition = cr.Color_Recognition(IMAGES_FOLDER_PATH)
 
-    # # Load the images
-    # images = color_recognition.load_images()
+    # Load the images
+    images = color_recognition.load_images()
 
 
-    # # detect the images
-    # color_recognition.process(images)
+    # detect the images
+    color_recognition.process(images)
 
-    # # Classify the colors
-    # color_recognition.classify()
+    # Classify the colors
+    color_recognition.classify()
 
 
     
 
   # ===================  REINHARD COLOR TRANSFER  =================== #
 
-    # IMAGES_FOLDER_PATH = './input'
-    # TEMPLATES_FOLDER_PATH = './template'
+    IMAGES_FOLDER_PATH = './input'
+    TEMPLATES_FOLDER_PATH = './template'
 
-    # # Create an instance of the Reinhard class
-    # transfer = rh.Image_Transfer(IMAGES_FOLDER_PATH, TEMPLATES_FOLDER_PATH) 
+    # Create an instance of the Reinhard class
+    transfer = rh.Image_Transfer(IMAGES_FOLDER_PATH, TEMPLATES_FOLDER_PATH) 
 
-    # # Transfer the images
-    # transfer.transfer()
+    # Transfer the images
+    transfer.transfer()
 
   
   # ===================  IMAGE THRESHOLDING =================== #
@@ -47,6 +48,17 @@ def main():
 
     # apply thresholding
     thresholding.apply_on_muliple_images()
+
+
+  # ===================== MORPHOLOGICAL TRANSFORMATIONS ===================== #
+
+    IMAGES_FOLDER_PATH = './morphological_inputs'
+
+    # Create an instance of the Morphological_Transformations class
+    transformations = mt.MorphologicalTransformations(IMAGES_FOLDER_PATH)
+
+    # apply morphological transformations
+    transformations.apply_opreation()
 
 
 

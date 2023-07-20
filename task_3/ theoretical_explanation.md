@@ -94,3 +94,19 @@
 <img src="./equations_image/4.png"  style="width:px;height:auto;">
 
 #### Where: 1/Wp is the normalization factor, which ensures that the sum of all the weights is 1. The second term is the spatial component, which is a function of the distance between the center pixel and the neighboring pixel. The third term is the range component, which is a function of the difference between the intensity of the center pixel and the intensity of the neighboring pixel. The spatial and range components are combined to form the weight of the neighboring pixel. The weight of the neighboring pixel is high if the neighboring pixel is close to the center pixel and if the intensity of the neighboring pixel is similar to the intensity of the center pixel. The weight of the neighboring pixel is low if the neighboring pixel is far from the center pixel and if the intensity of the neighboring pixel is different from the intensity of the center pixel. The neighboring pixels with high weights are used to restore the center pixel. The neighboring pixels with low weights are not used to restore the center pixel.
+
+
+---- 
+
+### __Use-Cases:__
+#### Median Filter: Median filters are particularly effective at removing salt-and-pepper noise.
+#### Bilateral Filter: Bilateral filters are used for smoothing images while preserving edges, which is important for applications like face recognition where edge details are crucial. 
+#### Gaussian Filter: Gaussian filters are used for blurring and noise reduction due to their good performance in the frequency domain. They're often used in computer vision and image processing for tasks like reducing image details and noise.
+#### Blur Filter: A blur filter can be used for creating a depth of field effect in images or videos, which makes the subject of the image or video pop by blurring the background. It can also be used to reduce noise or detail in an image.
+
+
+---- 
+
+Blurring is a technique to reduce high frequency noise in an image. The process removes pixel intensity variations and detail to make the image less sharp. It's commonly used in tasks such as reducing noise or detail in an image, or for preparing an image for further processing such as edge detection. There are various techniques for blurring such as Gaussian blur, median blur, bilateral blur etc.
+
+Smoothing also reduces noise and detail in an image, but the main objective is to eliminate sharp transitions and edges to create a smoother transition between different areas of the image. This can be particularly useful when the aim is to create an image that appears more smooth and less pixelated. Smoothing techniques include mean filtering, median filtering, mode filtering, etc.
